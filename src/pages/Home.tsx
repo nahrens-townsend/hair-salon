@@ -107,7 +107,7 @@ export default function Home() {
             >
               {/* Image */}
               <AnimatedSection flex={1} direction={block.reverse ? 'right' : 'left'}>
-                <Box overflow="hidden" position="relative">
+                <Box overflow="hidden" borderRadius="4px" position="relative">
                   <Box
                     as="img"
                     src={block.image}

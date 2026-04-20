@@ -257,6 +257,7 @@ export default function Contact() {
                 p={{ base: 8, md: 10 }}
                 border="1px solid"
                 borderColor="warm.100"
+                borderRadius="4px"
               >
                 <Heading
                   fontFamily="heading"

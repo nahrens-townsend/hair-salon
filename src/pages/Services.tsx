@@ -66,6 +66,7 @@ export default function Services() {
               p={6}
               border="1px solid"
               borderColor="warm.200"
+              borderRadius="4px"
             >
               <Text
                 fontFamily="body"
