@@ -52,7 +52,7 @@ export default function Services() {
           <AnimatedSection mb={14}>
             <Text
               fontFamily="body"
-              fontSize="0.65rem"
+              fontSize="1rem"
               letterSpacing="0.25em"
               textTransform="uppercase"
               color="warm.400"
@@ -90,7 +90,7 @@ export default function Services() {
             >
               <Text
                 fontFamily="body"
-                fontSize="0.72rem"
+                fontSize="1rem"
                 color="warm.500"
                 letterSpacing="0.05em"
               >
@@ -107,7 +107,7 @@ export default function Services() {
           <AnimatedSection mb={14}>
             <Text
               fontFamily="body"
-              fontSize="0.65rem"
+              fontSize="1rem"
               letterSpacing="0.25em"
               textTransform="uppercase"
               color="warm.400"
@@ -157,7 +157,7 @@ export default function Services() {
                     {item.title}
                   </Heading>
                   <Divider borderColor="warm.200" mb={4} />
-                  <Text fontFamily="body" fontSize="0.88rem" color="warm.500" lineHeight="1.9">
+                  <Text fontFamily="body" fontSize="1rem" color="warm.500" lineHeight="1.9">
                     {item.body}
                   </Text>
                 </Box>
@@ -174,7 +174,7 @@ export default function Services() {
             <VStack spacing={5}>
               <Text
                 fontFamily="body"
-                fontSize="0.65rem"
+                fontSize="1rem"
                 letterSpacing="0.25em"
                 textTransform="uppercase"
                 color="rgba(255,255,255,0.75)"

@@ -50,7 +50,7 @@ export default function ServiceCard({ category }: ServiceCardProps) {
 
       <Text
         fontFamily="body"
-        fontSize="0.85rem"
+        fontSize="1rem"
         color="warm.500"
         lineHeight="1.8"
         mb={6}
@@ -70,18 +70,18 @@ export default function ServiceCard({ category }: ServiceCardProps) {
             gap={4}
           >
             <Box flex={1}>
-              <Text fontFamily="body" fontSize="0.85rem" color="warm.900" lineHeight="1.5">
+              <Text fontFamily="body" fontSize="1rem" color="warm.900" lineHeight="1.5">
                 {item.name}
               </Text>
               {item.note && (
-                <Text fontFamily="body" fontSize="0.72rem" color="warm.200" mt={0.5}>
+                <Text fontFamily="body" fontSize="1rem" color="warm.200" mt={0.5}>
                   {item.note}
                 </Text>
               )}
             </Box>
             <Text
               fontFamily="body"
-              fontSize="0.82rem"
+              fontSize="1rem"
               color="warm.400"
               fontWeight="400"
               whiteSpace="nowrap"

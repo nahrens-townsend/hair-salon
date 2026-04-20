@@ -35,7 +35,7 @@ export default function OurTeam() {
           <AnimatedSection mb={16} maxW="680px">
             <Text
               fontFamily="body"
-              fontSize="0.65rem"
+              fontSize="1rem"
               letterSpacing="0.25em"
               textTransform="uppercase"
               color="warm.400"
@@ -53,7 +53,7 @@ export default function OurTeam() {
             >
               Specialists, not generalists.
             </Heading>
-            <Text fontFamily="body" fontSize="0.95rem" color="warm.500" lineHeight="1.95">
+            <Text fontFamily="body" fontSize="1rem" color="warm.500" lineHeight="1.95">
               Every stylist at Lumière has a deep specialty — whether that's lived-in color, precision cutting, men's grooming, bridal styling, or dimensional highlights. We hire slowly, develop continuously, and build a culture where expertise is respected and curiosity is constant.
             </Text>
           </AnimatedSection>
@@ -86,7 +86,7 @@ export default function OurTeam() {
               </Text>
               <Text
                 fontFamily="body"
-                fontSize="0.72rem"
+                fontSize="1rem"
                 letterSpacing="0.2em"
                 textTransform="uppercase"
                 color="warm.300"

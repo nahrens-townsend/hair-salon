@@ -47,7 +47,7 @@ export default function TeamCard({ member }: TeamCardProps) {
       >
         <Text
           fontFamily="body"
-          fontSize="0.65rem"
+          fontSize="1rem"
           letterSpacing="0.2em"
           textTransform="uppercase"
           color="warm.400"
@@ -70,7 +70,7 @@ export default function TeamCard({ member }: TeamCardProps) {
           variant="brandOutline"
           w="full"
           py={4}
-          fontSize="0.65rem"
+          fontSize="1rem"
         >
           View Profile
         </CTAButton>

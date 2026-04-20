@@ -85,7 +85,7 @@ export default function HeroSection({
           {preheading && (
             <Text
               fontFamily="body"
-              fontSize="0.68rem"
+              fontSize="1rem"
               letterSpacing="0.28em"
               textTransform="uppercase"
               color="warm.300"
@@ -110,7 +110,7 @@ export default function HeroSection({
           {subheading && (
             <Text
               fontFamily="body"
-              fontSize={{ base: '0.9rem', md: '1rem' }}
+              fontSize={{ base: '1rem', md: '1.25rem' }}
               color="rgba(255,255,255,0.82)"
               lineHeight="1.9"
               maxW="480px"

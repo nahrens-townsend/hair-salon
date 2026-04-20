@@ -18,7 +18,7 @@ export default function CTAButton({
     variant,
     px: 8,
     py: 6,
-    fontSize: '0.7rem',
+    fontSize: '1rem',
     letterSpacing: '0.18em',
     textTransform: 'uppercase' as const,
     fontFamily: 'body',

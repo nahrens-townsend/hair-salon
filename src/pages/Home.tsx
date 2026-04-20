@@ -99,7 +99,7 @@ export default function Home() {
             <Text
               key={i}
               fontFamily="body"
-              fontSize="0.7rem"
+              fontSize="1rem"
               letterSpacing="0.2em"
               textTransform="uppercase"
               color="white"
@@ -167,7 +167,7 @@ export default function Home() {
                 <VStack align="flex-start" spacing={5}>
                   <Text
                     fontFamily="body"
-                    fontSize="0.65rem"
+                    fontSize="1rem"
                     letterSpacing="0.25em"
                     textTransform="uppercase"
                     color="warm.400"
@@ -184,7 +184,7 @@ export default function Home() {
                   >
                     {block.heading}
                   </Heading>
-                  <Text fontFamily="body" fontSize="0.95rem" color="warm.500" lineHeight="1.9">
+                  <Text fontFamily="body" fontSize="1rem" color="warm.500" lineHeight="1.9">
                     {block.body}
                   </Text>
                   <CTAButton to={block.cta.to} variant="brandOutline" mt={2}>
@@ -227,7 +227,7 @@ export default function Home() {
                   </Text>
                   <Text
                     fontFamily="body"
-                    fontSize="0.72rem"
+                    fontSize="1rem"
                     letterSpacing="0.18em"
                     textTransform="uppercase"
                     color="warm.300"
@@ -266,7 +266,7 @@ export default function Home() {
             <VStack spacing={6}>
               <Text
                 fontFamily="body"
-                fontSize="0.65rem"
+                fontSize="1rem"
                 letterSpacing="0.25em"
                 textTransform="uppercase"
                 color="warm.300"

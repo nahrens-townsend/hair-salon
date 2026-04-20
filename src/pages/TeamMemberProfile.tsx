@@ -91,7 +91,7 @@ export default function TeamMemberProfile() {
           <Container maxW="1400px" px={0}>
             <Text
               fontFamily="body"
-              fontSize="0.65rem"
+              fontSize="1rem"
               letterSpacing="0.25em"
               textTransform="uppercase"
               color="warm.300"
@@ -120,7 +120,7 @@ export default function TeamMemberProfile() {
             <Breadcrumb
               separator="/"
               fontFamily="body"
-              fontSize="0.72rem"
+              fontSize="1rem"
               letterSpacing="0.12em"
               textTransform="uppercase"
               color="warm.200"
@@ -143,7 +143,7 @@ export default function TeamMemberProfile() {
               <VStack align="flex-start" spacing={6}>
                 <Text
                   fontFamily="body"
-                  fontSize="0.65rem"
+                  fontSize="1rem"
                   letterSpacing="0.25em"
                   textTransform="uppercase"
                   color="warm.400"
@@ -152,7 +152,7 @@ export default function TeamMemberProfile() {
                 </Text>
                 <Text
                   fontFamily="body"
-                  fontSize={{ base: '1rem', md: '1.05rem' }}
+                  fontSize="1.25rem"
                   color="warm.500"
                   lineHeight="2"
                 >
@@ -162,7 +162,7 @@ export default function TeamMemberProfile() {
                 <Box>
                   <Text
                     fontFamily="body"
-                    fontSize="0.65rem"
+                    fontSize="1rem"
                     letterSpacing="0.2em"
                     textTransform="uppercase"
                     color="warm.400"
@@ -190,7 +190,7 @@ export default function TeamMemberProfile() {
                   <Box key={d.label} py={7}>
                     <Text
                       fontFamily="body"
-                      fontSize="0.65rem"
+                      fontSize="1rem"
                       letterSpacing="0.2em"
                       textTransform="uppercase"
                       color="warm.400"
@@ -198,7 +198,7 @@ export default function TeamMemberProfile() {
                     >
                       {d.label}
                     </Text>
-                    <Text fontFamily="body" fontSize="0.92rem" color="warm.900" lineHeight="1.7">
+                    <Text fontFamily="body" fontSize="1rem" color="warm.900" lineHeight="1.7">
                       {d.value}
                     </Text>
                   </Box>
@@ -222,7 +222,7 @@ export default function TeamMemberProfile() {
               >
                 Ready to book with {member.name.split(' ')[0]}?
               </Heading>
-              <Text fontFamily="body" fontSize="0.88rem" color="warm.300" lineHeight="1.9" maxW="460px">
+              <Text fontFamily="body" fontSize="1rem" color="warm.300" lineHeight="1.9" maxW="460px">
                 Reach out to request {member.name.split(' ')[0]} for your next appointment. We'll be happy to arrange it.
               </Text>
               <Flex gap={4} wrap="wrap" justify="center" pt={2}>

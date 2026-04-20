@@ -15,7 +15,7 @@ function NotFound() {
       <Container maxW="600px" textAlign="center" py={20}>
         <Text
           fontFamily="body"
-          fontSize="0.65rem"
+          fontSize="1rem"
           letterSpacing="0.25em"
           textTransform="uppercase"
           color="warm.400"
@@ -32,7 +32,7 @@ function NotFound() {
         >
           Page not found.
         </Heading>
-        <Text fontFamily="body" fontSize="0.9rem" color="warm.500" mb={8} lineHeight="1.9">
+        <Text fontFamily="body" fontSize="1rem" color="warm.500" mb={8} lineHeight="1.9">
           The page you're looking for doesn't exist. Perhaps you'd like to head back home?
         </Text>
         <CTAButton to="/" variant="brand">Return Home</CTAButton>

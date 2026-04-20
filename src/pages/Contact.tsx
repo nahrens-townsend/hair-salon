@@ -94,7 +94,7 @@ export default function Contact() {
                 <Box>
                   <Text
                     fontFamily="body"
-                    fontSize="0.65rem"
+                    fontSize="1rem"
                     letterSpacing="0.25em"
                     textTransform="uppercase"
                     color="warm.400"
@@ -116,7 +116,7 @@ export default function Contact() {
                     <Box w="full">
                       <Text
                         fontFamily="body"
-                        fontSize="0.65rem"
+                        fontSize="1rem"
                         letterSpacing="0.2em"
                         textTransform="uppercase"
                         color="warm.400"
@@ -124,17 +124,17 @@ export default function Contact() {
                       >
                         Address
                       </Text>
-                      <Text fontFamily="body" fontSize="0.9rem" color="warm.900">
+                      <Text fontFamily="body" fontSize="1rem" color="warm.900">
                         67 Alenbrook Bay
                       </Text>
-                      <Text fontFamily="body" fontSize="0.9rem" color="warm.900">
+                      <Text fontFamily="body" fontSize="1rem" color="warm.900">
                         Winnipeg, Manitoba R3X 1Y2
                       </Text>
                     </Box>
                     <Box w="full">
                       <Text
                         fontFamily="body"
-                        fontSize="0.65rem"
+                        fontSize="1rem"
                         letterSpacing="0.2em"
                         textTransform="uppercase"
                         color="warm.400"
@@ -145,7 +145,7 @@ export default function Contact() {
                       <Link
                         href="tel:+12045550192"
                         fontFamily="body"
-                        fontSize="0.9rem"
+                        fontSize="1rem"
                         color="warm.900"
                         _hover={{ color: 'warm.400' }}
                       >
@@ -155,7 +155,7 @@ export default function Contact() {
                     <Box w="full">
                       <Text
                         fontFamily="body"
-                        fontSize="0.65rem"
+                        fontSize="1rem"
                         letterSpacing="0.2em"
                         textTransform="uppercase"
                         color="warm.400"
@@ -166,7 +166,7 @@ export default function Contact() {
                       <Link
                         href="mailto:hello@lumierehair.ca"
                         fontFamily="body"
-                        fontSize="0.9rem"
+                        fontSize="1rem"
                         color="warm.900"
                         _hover={{ color: 'warm.400' }}
                       >
@@ -176,7 +176,7 @@ export default function Contact() {
                     <Box w="full">
                       <Text
                         fontFamily="body"
-                        fontSize="0.65rem"
+                        fontSize="1rem"
                         letterSpacing="0.2em"
                         textTransform="uppercase"
                         color="warm.400"
@@ -185,22 +185,22 @@ export default function Contact() {
                         Follow Us
                       </Text>
                       <HStack spacing={5}>
-                        <Link
-                          href="https://instagram.com/lumierehair"
-                          isExternal
-                          fontFamily="body"
-                          fontSize="0.82rem"
-                          color="warm.900"
-                          _hover={{ color: 'warm.400' }}
-                          aria-label="Lumière on Instagram"
-                        >
-                          @lumierehair
-                        </Link>
-                        <Link
-                          href="https://facebook.com/lumierehairstudio"
-                          isExternal
-                          fontFamily="body"
-                          fontSize="0.82rem"
+                         <Link
+                           href="https://instagram.com/lumierehair"
+                           isExternal
+                           fontFamily="body"
+                           fontSize="1rem"
+                           color="warm.900"
+                           _hover={{ color: 'warm.400' }}
+                           aria-label="Lumière on Instagram"
+                         >
+                           @lumierehair
+                         </Link>
+                         <Link
+                           href="https://facebook.com/lumierehairstudio"
+                           isExternal
+                           fontFamily="body"
+                           fontSize="1rem"
                           color="warm.900"
                           _hover={{ color: 'warm.400' }}
                           aria-label="Lumière on Facebook"
@@ -216,7 +216,7 @@ export default function Contact() {
                 <Box w="full">
                   <Text
                     fontFamily="body"
-                    fontSize="0.65rem"
+                    fontSize="1rem"
                     letterSpacing="0.2em"
                     textTransform="uppercase"
                     color="warm.400"
@@ -233,17 +233,17 @@ export default function Contact() {
                         align="center"
                       >
                         <Text
-                          fontFamily="body"
-                          fontSize="0.85rem"
-                          color={h.time === 'Closed' ? 'warm.200' : 'warm.900'}
-                          fontWeight={h.time === 'Closed' ? '400' : '400'}
-                        >
-                          {h.day}
-                        </Text>
-                        <Text
-                          fontFamily="body"
-                          fontSize="0.85rem"
-                          color={h.time === 'Closed' ? 'warm.200' : 'warm.500'}
+                           fontFamily="body"
+                           fontSize="1rem"
+                           color={h.time === 'Closed' ? 'warm.200' : 'warm.900'}
+                           fontWeight={h.time === 'Closed' ? '400' : '400'}
+                         >
+                           {h.day}
+                         </Text>
+                         <Text
+                           fontFamily="body"
+                           fontSize="1rem"
+                           color={h.time === 'Closed' ? 'warm.200' : 'warm.500'}
                         >
                           {h.time}
                         </Text>
@@ -278,7 +278,7 @@ export default function Contact() {
                   <FormControl isRequired>
                     <FormLabel
                       fontFamily="body"
-                      fontSize="0.65rem"
+                      fontSize="1rem"
                       letterSpacing="0.2em"
                       textTransform="uppercase"
                       color="warm.400"
@@ -297,7 +297,7 @@ export default function Contact() {
                   <FormControl isRequired>
                     <FormLabel
                       fontFamily="body"
-                      fontSize="0.65rem"
+                      fontSize="1rem"
                       letterSpacing="0.2em"
                       textTransform="uppercase"
                       color="warm.400"
@@ -317,7 +317,7 @@ export default function Contact() {
                   <FormControl>
                     <FormLabel
                       fontFamily="body"
-                      fontSize="0.65rem"
+                      fontSize="1rem"
                       letterSpacing="0.2em"
                       textTransform="uppercase"
                       color="warm.400"
@@ -337,7 +337,7 @@ export default function Contact() {
                   <FormControl isRequired>
                     <FormLabel
                       fontFamily="body"
-                      fontSize="0.65rem"
+                      fontSize="1rem"
                       letterSpacing="0.2em"
                       textTransform="uppercase"
                       color="warm.400"
@@ -401,7 +401,7 @@ export default function Contact() {
               </Heading>
               <Text
                 fontFamily="body"
-                fontSize="0.88rem"
+                fontSize="1rem"
                 color="warm.300"
                 lineHeight="1.9"
                 maxW="500px"

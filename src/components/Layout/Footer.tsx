@@ -50,7 +50,7 @@ export default function Footer() {
             </Text>
             <Text
               fontFamily="body"
-              fontSize="0.8rem"
+              fontSize="1rem"
               lineHeight="1.9"
               color="warm.200"
               mb={6}
@@ -64,7 +64,7 @@ export default function Footer() {
                 isExternal
                 aria-label="Lumière on Instagram"
                 fontFamily="body"
-                fontSize="0.7rem"
+                fontSize="1rem"
                 letterSpacing="0.15em"
                 textTransform="uppercase"
                 color="warm.300"
@@ -79,7 +79,7 @@ export default function Footer() {
                 isExternal
                 aria-label="Lumière on Facebook"
                 fontFamily="body"
-                fontSize="0.7rem"
+                fontSize="1rem"
                 letterSpacing="0.15em"
                 textTransform="uppercase"
                 color="warm.300"
@@ -95,7 +95,7 @@ export default function Footer() {
           <GridItem>
             <Text
               fontFamily="body"
-              fontSize="0.65rem"
+              fontSize="1rem"
               fontWeight="400"
               letterSpacing="0.2em"
               textTransform="uppercase"
@@ -111,7 +111,7 @@ export default function Footer() {
                   as={RouterLink}
                   to={link.to}
                   fontFamily="body"
-                  fontSize="0.85rem"
+                  fontSize="1rem"
                   color="warm.200"
                   _hover={{ color: 'warm.400', textDecoration: 'none' }}
                   transition="color 0.2s"
@@ -126,7 +126,7 @@ export default function Footer() {
           <GridItem>
             <Text
               fontFamily="body"
-              fontSize="0.65rem"
+              fontSize="1rem"
               fontWeight="400"
               letterSpacing="0.2em"
               textTransform="uppercase"
@@ -138,10 +138,10 @@ export default function Footer() {
             <VStack align="flex-start" spacing={3}>
               {hours.map((h) => (
                 <Box key={h.day}>
-                  <Text fontFamily="body" fontSize="0.75rem" color="warm.200" lineHeight="1.6">
+                  <Text fontFamily="body" fontSize="1rem" color="warm.200" lineHeight="1.6">
                     {h.day}
                   </Text>
-                  <Text fontFamily="body" fontSize="0.8rem" color={h.time === 'Closed' ? 'warm.500' : 'warm.100'}>
+                  <Text fontFamily="body" fontSize="1rem" color={h.time === 'Closed' ? 'warm.500' : 'warm.100'}>
                     {h.time}
                   </Text>
                 </Box>
@@ -153,7 +153,7 @@ export default function Footer() {
           <GridItem>
             <Text
               fontFamily="body"
-              fontSize="0.65rem"
+              fontSize="1rem"
               fontWeight="400"
               letterSpacing="0.2em"
               textTransform="uppercase"
@@ -164,17 +164,17 @@ export default function Footer() {
             </Text>
             <VStack align="flex-start" spacing={4}>
               <Box>
-                <Text fontFamily="body" fontSize="0.85rem" color="warm.100" lineHeight="1.7">
+                <Text fontFamily="body" fontSize="1rem" color="warm.100" lineHeight="1.7">
                   67 Alenbrook Bay
                 </Text>
-                <Text fontFamily="body" fontSize="0.85rem" color="warm.100">
+                <Text fontFamily="body" fontSize="1rem" color="warm.100">
                   Winnipeg, Manitoba R3X 1Y2
                 </Text>
               </Box>
               <Link
                 href="tel:2045550192"
                 fontFamily="body"
-                fontSize="0.85rem"
+                fontSize="1rem"
                 color="warm.200"
                 _hover={{ color: 'warm.400', textDecoration: 'none' }}
                 transition="color 0.2s"
@@ -184,7 +184,7 @@ export default function Footer() {
               <Link
                 href="mailto:hello@lumierehair.ca"
                 fontFamily="body"
-                fontSize="0.85rem"
+                fontSize="1rem"
                 color="warm.200"
                 _hover={{ color: 'warm.400', textDecoration: 'none' }}
                 transition="color 0.2s"
@@ -203,10 +203,10 @@ export default function Footer() {
           direction={{ base: 'column', md: 'row' }}
           gap={3}
         >
-          <Text fontFamily="body" fontSize="0.72rem" color="warm.500" letterSpacing="0.05em">
+          <Text fontFamily="body" fontSize="1rem" color="warm.500" letterSpacing="0.05em">
             © {new Date().getFullYear()} Lumière Hair Studio. All rights reserved.
           </Text>
-          <Text fontFamily="body" fontSize="0.72rem" color="warm.500">
+          <Text fontFamily="body" fontSize="1rem" color="warm.500">
             67 Alenbrook Bay, Winnipeg, MB
           </Text>
         </Flex>

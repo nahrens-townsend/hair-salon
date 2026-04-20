@@ -70,7 +70,7 @@ export default function About() {
               <VStack align="flex-start" spacing={6}>
                 <Text
                   fontFamily="body"
-                  fontSize="0.65rem"
+                  fontSize="1rem"
                   letterSpacing="0.25em"
                   textTransform="uppercase"
                   color="warm.400"
@@ -86,10 +86,10 @@ export default function About() {
                 >
                   A studio built around the belief that hair is personal.
                 </Heading>
-                <Text fontFamily="body" fontSize="0.95rem" color="warm.500" lineHeight="1.95">
+                <Text fontFamily="body" fontSize="1rem" color="warm.500" lineHeight="1.95">
                   Lumière was born from a simple conviction: that a hair appointment should feel like a pause — a moment of genuine care in an otherwise relentless world. Sophia Laurent founded this studio in 2012 after years of training and working abroad, driven by a desire to bring a European sensibility for craft and service to her home city of Winnipeg.
                 </Text>
-                <Text fontFamily="body" fontSize="0.95rem" color="warm.500" lineHeight="1.95">
+                <Text fontFamily="body" fontSize="1rem" color="warm.500" lineHeight="1.95">
                   In the years since, Lumière has grown into a team of six deeply skilled specialists who share a single philosophy: that the most beautiful results come from truly listening. To your hair. To your life. To what you actually need.
                 </Text>
                 <CTAButton to="/team" variant="brand" mt={2}>
@@ -112,7 +112,7 @@ export default function About() {
                     >
                       {v.label}
                     </Heading>
-                    <Text fontFamily="body" fontSize="0.88rem" color="warm.500" lineHeight="1.85">
+                    <Text fontFamily="body" fontSize="1rem" color="warm.500" lineHeight="1.85">
                       {v.body}
                     </Text>
                   </Box>
@@ -151,7 +151,7 @@ export default function About() {
                   </Text>
                   <Text
                     fontFamily="body"
-                    fontSize="0.72rem"
+                    fontSize="1rem"
                     letterSpacing="0.18em"
                     textTransform="uppercase"
                     color="warm.300"
@@ -171,7 +171,7 @@ export default function About() {
           <AnimatedSection mb={14} textAlign="center">
             <Text
               fontFamily="body"
-              fontSize="0.65rem"
+              fontSize="1rem"
               letterSpacing="0.25em"
               textTransform="uppercase"
               color="warm.400"
@@ -205,7 +205,7 @@ export default function About() {
               >
                 Ready to visit us?
               </Heading>
-              <Text fontFamily="body" fontSize="0.95rem" color="warm.500" lineHeight="1.9">
+              <Text fontFamily="body" fontSize="1rem" color="warm.500" lineHeight="1.9">
                 We'd love to meet you. Come in for a consultation or book your first appointment today.
               </Text>
               <Flex gap={4} wrap="wrap" justify="center" pt={2}>

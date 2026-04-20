@@ -86,7 +86,7 @@ export default function Navbar() {
                 as={RouterLink}
                 to={link.to}
                 fontFamily="body"
-                fontSize="0.7rem"
+                fontSize="1rem"
                 fontWeight="400"
                 letterSpacing="0.18em"
                 textTransform="uppercase"
@@ -146,7 +146,7 @@ export default function Navbar() {
                   to={link.to}
                   onClick={onClose}
                   fontFamily="body"
-                  fontSize="0.75rem"
+                  fontSize="1rem"
                   fontWeight="400"
                   letterSpacing="0.2em"
                   textTransform="uppercase"
