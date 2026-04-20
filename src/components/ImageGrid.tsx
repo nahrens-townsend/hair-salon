@@ -18,6 +18,7 @@ export default function ImageGrid({
         <AnimatedSection key={img.src} delay={i * 0.08} direction="fade">
           <Box
             overflow="hidden"
+            borderRadius="4px"
             position="relative"
             _hover={{ '& img': { transform: 'scale(1.05)' } }}
           >

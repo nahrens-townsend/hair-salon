@@ -19,6 +19,7 @@ import { useState } from 'react';
 import HeroSection from '../components/HeroSection';
 import AnimatedSection from '../components/AnimatedSection';
 import CTAButton from '../components/CTAButton';
+import SEOHead from '../components/SEOHead';
 
 const hours = [
   { day: 'Monday', time: 'Closed' },
@@ -67,6 +68,11 @@ export default function Contact() {
 
   return (
     <Box>
+      <SEOHead
+        title="Book an Appointment | Lumière Hair Studio Winnipeg"
+        description="Contact Lumière Hair Studio in Winnipeg to book your appointment. Located at 67 Alenbrook Bay, Winnipeg, MB. Call (204) 555-0192 or send us a message."
+        canonical="/contact"
+      />
       <HeroSection
         imageUrl="https://images.unsplash.com/photo-1605497788044-5a32c7078486?w=1400&q=85"
         preheading="Get in Touch"
@@ -257,6 +263,7 @@ export default function Contact() {
                 p={{ base: 8, md: 10 }}
                 border="1px solid"
                 borderColor="warm.100"
+                borderRadius="4px"
               >
                 <Heading
                   fontFamily="heading"

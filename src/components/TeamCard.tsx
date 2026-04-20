@@ -20,7 +20,7 @@ export default function TeamCard({ member }: TeamCardProps) {
       }}
     >
       {/* Image */}
-      <AspectRatio ratio={3 / 4} mb={0} overflow="hidden">
+      <AspectRatio ratio={3 / 4} mb={0} overflow="hidden" borderTopRadius="4px">
         <Box overflow="hidden">
           <Box
             as="img"
@@ -42,6 +42,7 @@ export default function TeamCard({ member }: TeamCardProps) {
         border="1px solid"
         borderColor="warm.100"
         borderTop="none"
+        borderBottomRadius="4px"
         p={{ base: 5, md: 6 }}
       >
         <Text

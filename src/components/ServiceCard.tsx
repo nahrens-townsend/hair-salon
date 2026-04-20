@@ -14,6 +14,9 @@ export default function ServiceCard({ category }: ServiceCardProps) {
       p={{ base: 7, md: 9 }}
       position="relative"
       role="article"
+      borderRadius="4px"
+      overflow="hidden"
+      h="100%"
       transition="all 0.3s ease"
       _hover={{
         transform: 'translateY(-4px)',

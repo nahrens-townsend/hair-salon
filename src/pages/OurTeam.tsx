@@ -9,11 +9,17 @@ import {
 import HeroSection from '../components/HeroSection';
 import AnimatedSection from '../components/AnimatedSection';
 import TeamCard from '../components/TeamCard';
+import SEOHead from '../components/SEOHead';
 import { teamMembers } from '../data/team';
 
 export default function OurTeam() {
   return (
     <Box>
+      <SEOHead
+        title="Our Stylists | Lumière Hair Studio Winnipeg Hair Team"
+        description="Meet the six specialist stylists at Lumière Hair Studio in Winnipeg. Experts in balayage, precision cuts, colour correction, bridal styling & men's grooming."
+        canonical="/team"
+      />
       <HeroSection
         imageUrl="https://images.unsplash.com/photo-1519699047748-de8e457a634e?w=1400&q=85"
         preheading="The People Behind Lumière"

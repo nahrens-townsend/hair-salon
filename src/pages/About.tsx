@@ -12,6 +12,7 @@ import HeroSection from '../components/HeroSection';
 import AnimatedSection from '../components/AnimatedSection';
 import ImageGrid from '../components/ImageGrid';
 import CTAButton from '../components/CTAButton';
+import SEOHead from '../components/SEOHead';
 
 const galleryImages = [
   { src: 'https://images.unsplash.com/photo-1560066984-138dadb4c035?w=700&q=80', alt: 'Color service in progress at Lumière' },
@@ -43,6 +44,11 @@ const values = [
 export default function About() {
   return (
     <Box>
+      <SEOHead
+        title="About Lumière Hair Studio | Winnipeg Hair Salon Story & Values"
+        description="Learn about Lumière Hair Studio — Winnipeg's premier hair salon founded in 2012 by Sophia Laurent. Discover our story, values, and commitment to craft."
+        canonical="/about"
+      />
       <HeroSection
         imageUrl="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=1400&q=85"
         preheading="Our Story"

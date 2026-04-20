@@ -12,11 +12,31 @@ import HeroSection from '../components/HeroSection';
 import AnimatedSection from '../components/AnimatedSection';
 import ServiceCard from '../components/ServiceCard';
 import CTAButton from '../components/CTAButton';
+import SEOHead from '../components/SEOHead';
 import { serviceCategories, bookingPolicy } from '../data/services';
+
+const servicesSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'ItemList',
+  name: 'Hair Services at Lumière Hair Studio, Winnipeg',
+  url: 'https://lumierehair.ca/services',
+  itemListElement: serviceCategories.map((cat, i) => ({
+    '@type': 'ListItem',
+    position: i + 1,
+    name: cat.title,
+    description: cat.description,
+  })),
+};
 
 export default function Services() {
   return (
     <Box>
+      <SEOHead
+        title="Hair Services & Pricing | Lumière Hair Studio Winnipeg"
+        description="Full hair service menu with transparent pricing. Balayage, precision cuts, colour correction, bridal updos, extensions & more at Lumière Hair Studio in Winnipeg, MB."
+        canonical="/services"
+        jsonLd={servicesSchema}
+      />
       <HeroSection
         imageUrl="https://images.unsplash.com/photo-1562322140-8baeececf3df?w=1400&q=85"
         preheading="What We Offer"
@@ -54,7 +74,7 @@ export default function Services() {
 
           <SimpleGrid columns={{ base: 1, md: 2, xl: 3 }} gap={{ base: 6, md: 8 }}>
             {serviceCategories.map((cat, i) => (
-              <AnimatedSection key={cat.title} delay={i * 0.08} direction="up">
+              <AnimatedSection key={cat.title} delay={i * 0.08} direction="up" h="100%">
                 <ServiceCard category={cat} />
               </AnimatedSection>
             ))}
@@ -66,6 +86,7 @@ export default function Services() {
               p={6}
               border="1px solid"
               borderColor="warm.200"
+              borderRadius="4px"
             >
               <Text
                 fontFamily="body"

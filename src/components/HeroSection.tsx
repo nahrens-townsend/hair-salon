@@ -17,6 +17,8 @@ interface HeroSectionProps {
   overlayOpacity?: number;
   textAlign?: 'left' | 'center' | 'right';
   objectPosition?: string;
+  /** Mark the hero image as high-priority for LCP. Use on above-the-fold heroes only. */
+  priority?: boolean;
 }
 
 export default function HeroSection({
@@ -29,6 +31,7 @@ export default function HeroSection({
   overlayOpacity = 0.48,
   textAlign = 'center',
   objectPosition = 'center',
+  priority = false,
 }: HeroSectionProps) {
   return (
     <Box
@@ -54,6 +57,7 @@ export default function HeroSection({
         objectFit="cover"
         objectPosition={objectPosition}
         loading="eager"
+        {...(priority ? { fetchpriority: 'high' } : {})}
       />
 
       {/* Overlay */}
@@ -61,6 +65,7 @@ export default function HeroSection({
         position="absolute"
         inset={0}
         bg={`rgba(45,37,32,${overlayOpacity})`}
+        aria-hidden="true"
       />
 
       {/* Content */}

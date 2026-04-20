@@ -2,42 +2,43 @@ import { Box, Container, Flex, Heading, Text, SimpleGrid, VStack } from '@chakra
 import HeroSection from '../components/HeroSection';
 import AnimatedSection from '../components/AnimatedSection';
 import CTAButton from '../components/CTAButton';
+import SEOHead from '../components/SEOHead';
 
 const marqueeText = 'Balayage · Precision Cuts · Bridal Styling · Color Artistry · Extensions · Keratin ·';
 
 const alternatingBlocks = [
   {
     image: 'https://images.unsplash.com/photo-1560066984-138dadb4c035?w=900&q=80',
-    alt: 'Stylist performing a balayage color treatment',
+    alt: 'Stylist performing a balayage color treatment at Lumière Hair Studio, Winnipeg',
     label: 'The Art of Color',
-    heading: 'Color that moves with you',
-    body: 'We believe that color should feel lived-in, not labored. Our colorists blend, paint, and balance every shade by hand — creating results that grow out gracefully and turn heads effortlessly.',
+    heading: 'Winnipeg colour services crafted by hand',
+    body: 'We believe that colour should feel lived-in, not labored. Our Winnipeg colorists blend, paint, and balance every shade by hand — creating results that grow out gracefully and turn heads effortlessly.',
     cta: { label: 'Explore Services', to: '/services' },
     reverse: false,
   },
   {
     image: 'https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=900&q=80',
-    alt: 'Elegant salon interior with warm lighting',
+    alt: 'Elegant salon interior at Lumière Hair Studio in Winnipeg with warm lighting',
     label: 'Our Studio',
-    heading: 'A space designed for calm',
+    heading: 'A Winnipeg hair studio designed for calm',
     body: 'Step into an environment crafted for intention. Soft light, warm materials, unhurried appointments. At Lumière, the experience begins the moment you walk through the door.',
     cta: { label: 'About the Studio', to: '/about' },
     reverse: true,
   },
   {
     image: 'https://images.unsplash.com/photo-1519699047748-de8e457a634e?w=900&q=80',
-    alt: 'Stylist working on a client\'s hair',
+    alt: 'Stylist working on a client\'s hair at Lumière Hair Studio',
     label: 'Meet the Team',
     heading: 'Six artists. One shared standard.',
-    body: 'Our stylists are specialists, not generalists. Each brings a unique depth of expertise — whether it\'s balayage, bridal styling, precision cuts, or color correction. Together, they form a team that consistently delivers.',
+    body: 'Our Winnipeg stylists are specialists, not generalists. Each brings a unique depth of expertise — whether it\'s balayage, bridal styling, precision cuts, or colour correction. Together, they form a team that consistently delivers.',
     cta: { label: 'Meet Our Stylists', to: '/team' },
     reverse: false,
   },
   {
     image: 'https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=900&q=80',
-    alt: 'Beautiful bridal hair updo',
+    alt: 'Beautiful bridal hair updo created at Lumière Hair Studio, Winnipeg',
     label: 'Bridal & Events',
-    heading: 'Your most important day, perfected.',
+    heading: 'Winnipeg bridal hair — your most important day, perfected.',
     body: 'We have been part of hundreds of Winnipeg weddings, and we understand the weight of those mornings. Ava and the Lumière team bring calm precision and years of bridal expertise to every appointment.',
     cta: { label: 'Contact Us', to: '/contact' },
     reverse: true,
@@ -47,6 +48,12 @@ const alternatingBlocks = [
 export default function Home() {
   return (
     <Box>
+      <SEOHead
+        title="Lumière Hair Studio | Premier Hair Salon in Winnipeg, MB"
+        description="Lumière Hair Studio in Winnipeg, MB — expert balayage, precision cuts, bridal styling, colour correction & more. Where artistry meets intention. Book today."
+        canonical="/"
+      />
+
       {/* Hero */}
       <HeroSection
         imageUrl="https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?w=1600&q=85"
@@ -59,15 +66,29 @@ export default function Home() {
         ]}
         height="100vh"
         overlayOpacity={0.45}
+        priority
       />
 
       {/* Marquee strip */}
-      <Box bg="warm.400" py={4} overflow="hidden">
+      <Box
+        as="div"
+        aria-hidden="true"
+        bg="warm.400"
+        py={4}
+        overflow="hidden"
+        sx={{
+          '@media (prefers-reduced-motion: no-preference)': {
+            '& .marquee-track': {
+              animation: 'marquee 30s linear infinite',
+            },
+          },
+        }}
+      >
         <Box
+          className="marquee-track"
           display="flex"
           gap={0}
           css={{
-            animation: 'marquee 30s linear infinite',
             '@keyframes marquee': {
               '0%': { transform: 'translateX(0)' },
               '100%': { transform: 'translateX(-50%)' },
@@ -107,7 +128,7 @@ export default function Home() {
             >
               {/* Image */}
               <AnimatedSection flex={1} direction={block.reverse ? 'right' : 'left'}>
-                <Box overflow="hidden" position="relative">
+                <Box overflow="hidden" borderRadius="4px" position="relative">
                   <Box
                     as="img"
                     src={block.image}
@@ -131,6 +152,7 @@ export default function Home() {
                     border="2px solid"
                     borderColor="warm.300"
                     zIndex={-1}
+                    aria-hidden="true"
                   />
                 </Box>
               </AnimatedSection>
@@ -153,6 +175,7 @@ export default function Home() {
                     {block.label}
                   </Text>
                   <Heading
+                    as="h2"
                     fontFamily="heading"
                     fontWeight="300"
                     fontSize={{ base: '2.2rem', md: '3rem' }}
@@ -237,7 +260,7 @@ export default function Home() {
           objectFit="cover"
           loading="lazy"
         />
-        <Box position="absolute" inset={0} bg="rgba(45,37,32,0.6)" />
+        <Box position="absolute" inset={0} bg="rgba(45,37,32,0.6)" aria-hidden="true" />
         <Container maxW="900px" px={{ base: 6, md: 10 }} position="relative" zIndex={1} textAlign="center">
           <AnimatedSection>
             <VStack spacing={6}>
@@ -251,13 +274,14 @@ export default function Home() {
                 Ready when you are
               </Text>
               <Heading
+                as="h2"
                 fontFamily="heading"
                 fontWeight="300"
                 fontSize={{ base: '2.8rem', md: '4.5rem' }}
                 color="white"
                 lineHeight="1.1"
               >
-                Your next chapter starts with a conversation.
+                Book your Winnipeg hair appointment today.
               </Heading>
               <CTAButton to="/contact" variant="brand" mt={4} px={12} py={7}>
                 Book Your Appointment
