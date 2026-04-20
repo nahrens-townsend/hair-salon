@@ -15,6 +15,7 @@ import { useParams, Link as RouterLink, Navigate } from 'react-router-dom';
 import { teamMembers } from '../data/team';
 import AnimatedSection from '../components/AnimatedSection';
 import CTAButton from '../components/CTAButton';
+import SEOHead from '../components/SEOHead';
 
 export default function TeamMemberProfile() {
   const { memberId } = useParams<{ memberId: string }>();
@@ -31,8 +32,29 @@ export default function TeamMemberProfile() {
     { label: 'What She / He Loves Most', value: member.enjoysMost },
   ];
 
+  const personSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Person',
+    name: member.name,
+    jobTitle: member.role,
+    worksFor: {
+      '@type': 'HairSalon',
+      name: 'Lumière Hair Studio',
+      url: 'https://lumierehair.ca',
+    },
+    description: member.bio.slice(0, 200),
+    image: member.image,
+  };
+
   return (
     <Box>
+      <SEOHead
+        title={`${member.name} — ${member.specialty} | Lumière Hair Studio Winnipeg`}
+        description={`Meet ${member.name}, ${member.role} at Lumière Hair Studio in Winnipeg. ${member.yearsExp} years of experience specialising in ${member.specialty}.`}
+        canonical={`/team/${member.id}`}
+        ogImage={member.image}
+        jsonLd={personSchema}
+      />
       {/* Portrait hero */}
       <Box
         position="relative"
