@@ -10,12 +10,12 @@ import {
   Breadcrumb,
   BreadcrumbItem,
   BreadcrumbLink,
-} from '@chakra-ui/react';
-import { useParams, Link as RouterLink, Navigate } from 'react-router-dom';
-import { teamMembers } from '../data/team';
-import AnimatedSection from '../components/AnimatedSection';
-import CTAButton from '../components/CTAButton';
-import SEOHead from '../components/SEOHead';
+} from "@chakra-ui/react";
+import { useParams, Link as RouterLink, Navigate } from "react-router-dom";
+import { teamMembers } from "../data/team";
+import AnimatedSection from "../components/AnimatedSection";
+import CTAButton from "../components/CTAButton";
+import SEOHead from "../components/SEOHead";
 
 export default function TeamMemberProfile() {
   const { memberId } = useParams<{ memberId: string }>();
@@ -26,21 +26,21 @@ export default function TeamMemberProfile() {
   }
 
   const details = [
-    { label: 'Years of Experience', value: `${member.yearsExp} years` },
-    { label: 'Specialty', value: member.specialty },
-    { label: 'Favourite Style', value: member.favoriteStyle },
-    { label: 'What She / He Loves Most', value: member.enjoysMost },
+    { label: "Years of Experience", value: `${member.yearsExp} years` },
+    { label: "Specialty", value: member.specialty },
+    { label: "Favourite Style", value: member.favoriteStyle },
+    { label: "What She / He Loves Most", value: member.enjoysMost },
   ];
 
   const personSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'Person',
+    "@context": "https://schema.org",
+    "@type": "Person",
     name: member.name,
     jobTitle: member.role,
     worksFor: {
-      '@type': 'HairSalon',
-      name: 'Lumière Hair Studio',
-      url: 'https://lumierehair.ca',
+      "@type": "HairSalon",
+      name: "Lumière Hair Studio",
+      url: "https://lumierehair.ca",
     },
     description: member.bio.slice(0, 200),
     image: member.image,
@@ -58,9 +58,9 @@ export default function TeamMemberProfile() {
       {/* Portrait hero */}
       <Box
         position="relative"
-        h={{ base: '70vh', md: '88vh' }}
+        h={{ base: "70vh", md: "88vh" }}
         overflow="hidden"
-        mt="80px"
+        bg="warm.900"
       >
         <Box
           as="img"
@@ -70,14 +70,13 @@ export default function TeamMemberProfile() {
           inset={0}
           w="100%"
           h="100%"
-          objectFit="cover"
-          objectPosition="center top"
+          objectFit="contain"
           loading="eager"
         />
         <Box
           position="absolute"
           inset={0}
-          bgGradient="linear(to-t, rgba(45,37,32,0.85) 0%, rgba(45,37,32,0.15) 55%, transparent 100%)"
+          bgGradient="linear(to-b, rgba(45,37,32,0.82) 0%, transparent 30%, transparent 60%, rgba(45,37,32,0.9) 100%)"
         />
 
         {/* Name overlay */}
@@ -102,7 +101,7 @@ export default function TeamMemberProfile() {
             <Heading
               fontFamily="heading"
               fontWeight="300"
-              fontSize={{ base: '3.2rem', md: '5.5rem' }}
+              fontSize={{ base: "3.2rem", md: "5.5rem" }}
               color="white"
               lineHeight="1.05"
             >
@@ -126,7 +125,11 @@ export default function TeamMemberProfile() {
               color="warm.200"
             >
               <BreadcrumbItem>
-                <BreadcrumbLink as={RouterLink} to="/team" _hover={{ color: 'warm.400' }}>
+                <BreadcrumbLink
+                  as={RouterLink}
+                  to="/team"
+                  _hover={{ color: "warm.400" }}
+                >
                   Our Team
                 </BreadcrumbLink>
               </BreadcrumbItem>
@@ -137,7 +140,6 @@ export default function TeamMemberProfile() {
           </AnimatedSection>
 
           <SimpleGrid columns={{ base: 1, lg: 2 }} gap={{ base: 14, lg: 24 }}>
-
             {/* Bio */}
             <AnimatedSection direction="left">
               <VStack align="flex-start" spacing={6}>
@@ -148,7 +150,7 @@ export default function TeamMemberProfile() {
                   textTransform="uppercase"
                   color="warm.400"
                 >
-                  About {member.name.split(' ')[0]}
+                  About {member.name.split(" ")[0]}
                 </Text>
                 <Text
                   fontFamily="body"
@@ -173,7 +175,7 @@ export default function TeamMemberProfile() {
                   <Text
                     fontFamily="heading"
                     fontStyle="italic"
-                    fontSize={{ base: '1.3rem', md: '1.6rem' }}
+                    fontSize={{ base: "1.3rem", md: "1.6rem" }}
                     color="warm.900"
                     lineHeight="1.45"
                   >
@@ -185,7 +187,11 @@ export default function TeamMemberProfile() {
 
             {/* Details grid */}
             <AnimatedSection direction="right" delay={0.15}>
-              <VStack align="stretch" spacing={0} divider={<Divider borderColor="warm.100" />}>
+              <VStack
+                align="stretch"
+                spacing={0}
+                divider={<Divider borderColor="warm.100" />}
+              >
                 {details.map((d) => (
                   <Box key={d.label} py={7}>
                     <Text
@@ -198,7 +204,12 @@ export default function TeamMemberProfile() {
                     >
                       {d.label}
                     </Text>
-                    <Text fontFamily="body" fontSize="1rem" color="warm.900" lineHeight="1.7">
+                    <Text
+                      fontFamily="body"
+                      fontSize="1rem"
+                      color="warm.900"
+                      lineHeight="1.7"
+                    >
                       {d.value}
                     </Text>
                   </Box>
@@ -217,17 +228,28 @@ export default function TeamMemberProfile() {
               <Heading
                 fontFamily="heading"
                 fontWeight="300"
-                fontSize={{ base: '2rem', md: '2.8rem' }}
+                fontSize={{ base: "2rem", md: "2.8rem" }}
                 color="white"
               >
-                Ready to book with {member.name.split(' ')[0]}?
+                Ready to book with {member.name.split(" ")[0]}?
               </Heading>
-              <Text fontFamily="body" fontSize="1rem" color="warm.300" lineHeight="1.9" maxW="460px">
-                Reach out to request {member.name.split(' ')[0]} for your next appointment. We'll be happy to arrange it.
+              <Text
+                fontFamily="body"
+                fontSize="1rem"
+                color="warm.300"
+                lineHeight="1.9"
+                maxW="460px"
+              >
+                Reach out to request {member.name.split(" ")[0]} for your next
+                appointment. We'll be happy to arrange it.
               </Text>
               <Flex gap={4} wrap="wrap" justify="center" pt={2}>
-                <CTAButton to="/contact" variant="brand">Book an Appointment</CTAButton>
-                <CTAButton to="/team" variant="brandOutline">Back to Team</CTAButton>
+                <CTAButton to="/contact" variant="brand">
+                  Book an Appointment
+                </CTAButton>
+                <CTAButton to="/team" variant="brandOutline">
+                  Back to Team
+                </CTAButton>
               </Flex>
             </VStack>
           </AnimatedSection>
