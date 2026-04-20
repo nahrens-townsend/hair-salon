@@ -54,7 +54,7 @@ export default function Services() {
 
           <SimpleGrid columns={{ base: 1, md: 2, xl: 3 }} gap={{ base: 6, md: 8 }}>
             {serviceCategories.map((cat, i) => (
-              <AnimatedSection key={cat.title} delay={i * 0.08} direction="up">
+              <AnimatedSection key={cat.title} delay={i * 0.08} direction="up" h="100%">
                 <ServiceCard category={cat} />
               </AnimatedSection>
             ))}
